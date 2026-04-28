@@ -1,0 +1,17 @@
+<command> ::= <load_command> | <compute_command> | <chart_command> | <pivot_command>
+
+<load_command> ::= "load" <file>
+
+<compute_command> ::= "load" <file> "and compute" <metric> "by" <group>
+
+<chart_command> ::= "generate" <chart_type> "chart comparing" <metric> "by" <group>
+
+<pivot_command> ::= "create pivot table by" <group> "and" <metric>
+
+<file> ::= identifier ".csv"
+
+<metric> ::= "revenue" | "expense" | "profit" | "profit margin"
+
+<group> ::= "region" | "product" | "month" | "date"
+
+<chart_type> ::= "bar" | "line"
